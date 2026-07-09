@@ -40,7 +40,7 @@ export default async function AdminPage() {
                 </tr>
               </thead>
               <tbody>
-                {messages.map((msg) => (
+                {messages.map((msg: any) => (
                   <tr key={msg.id} className="border-b border-gray-100 hover:bg-gray-50">
                     <td className="py-4 px-4 align-top whitespace-nowrap">
                       {new Date(msg.createdAt).toLocaleDateString()}
