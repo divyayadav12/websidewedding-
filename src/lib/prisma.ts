@@ -6,10 +6,9 @@ const dbUrl = process.env.DATABASE_URL && process.env.DATABASE_URL !== "undefine
   ? process.env.DATABASE_URL
   : "file:./dev.db";
 
-const libsql = createClient({
+const adapter = new PrismaLibSql({
   url: dbUrl,
 });
-const adapter = new PrismaLibSql(libsql);
 
 const globalForPrisma = global as unknown as { prisma: PrismaClient };
 
