@@ -6,7 +6,7 @@ import { prisma } from '@/lib/prisma';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { firstName, lastName, email, weddingDate, location, message } = body;
+    const { firstName, lastName, email, phone, weddingDate, location, message } = body;
 
     // Save to Database
     const newContact = await prisma.contactMessage.create({
@@ -14,6 +14,7 @@ export async function POST(request: Request) {
         firstName,
         lastName,
         email,
+        phone,
         weddingDate,
         location,
         message,
@@ -37,7 +38,7 @@ export async function POST(request: Request) {
             name: `${firstName} ${lastName}`,
             email: email,
             subject: `New Wedding Inquiry from ${firstName}`,
-            message: `Date: ${weddingDate}\nLocation: ${location}\n\nMessage:\n${message}`,
+            message: `Phone: ${phone}\nDate: ${weddingDate}\nLocation: ${location}\n\nMessage:\n${message}`,
           }),
         });
       } catch (emailError) {

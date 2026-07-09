@@ -7,6 +7,7 @@ export default function ContactPage() {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
     weddingDate: "",
     location: "",
     message: "",
@@ -33,6 +34,7 @@ export default function ContactPage() {
         firstName: "",
         lastName: "",
         email: "",
+        phone: "",
         weddingDate: "",
         location: "",
         message: "",
@@ -120,6 +122,19 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 placeholder="john@example.com"
+                className="w-full bg-white px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-foreground/20"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label className="font-sans text-sm font-semibold text-foreground">Phone Number *</label>
+              <input 
+                type="tel" 
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                placeholder="+91 9876543210"
                 className="w-full bg-white px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-foreground/20"
               />
             </div>

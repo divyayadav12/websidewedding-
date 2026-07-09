@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
 }
 
 model PortfolioItem {
@@ -30,9 +30,11 @@ model ContactMessage {
   firstName   String
   lastName    String
   email       String
+  phone       String   @default("")
   weddingDate String
   location    String
   message     String
+  status      String   @default("new")
   createdAt   DateTime @default(now())
 }
 

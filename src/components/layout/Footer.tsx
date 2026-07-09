@@ -2,8 +2,14 @@
 
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
   return (
     <footer className="bg-[#111111] relative border-t border-white/5 pt-20 pb-10 overflow-hidden">
       {/* Luxury Background Glow */}
@@ -83,9 +89,14 @@ export default function Footer() {
 
         {/* Newsletter & Copyright */}
         <div className="border-t border-white/5 pt-8 flex flex-col lg:flex-row items-center justify-between gap-6">
-          <p className="font-sans text-xs text-white/40 tracking-wider">
-            &copy; {new Date().getFullYear()} EDIT WITH ANSHUL. ALL RIGHTS RESERVED.
-          </p>
+          <div className="flex items-center space-x-4">
+            <p className="font-sans text-xs text-white/40 tracking-wider">
+              &copy; {new Date().getFullYear()} EDIT WITH ANSHUL. ALL RIGHTS RESERVED.
+            </p>
+            <Link href="/admin" className="font-sans text-xs text-white/20 hover:text-white/60 transition-colors">
+              Admin Login
+            </Link>
+          </div>
           <div className="flex items-center space-x-4">
             <input 
               type="email" 
