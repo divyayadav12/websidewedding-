@@ -25,8 +25,51 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Luxury Wedding Films & Photography",
-  description: "Award-winning wedding photographer and cinematic videographer.",
+  title: {
+    default: "Luxury Wedding Films & Photography | Divya Yadav",
+    template: "%s | Divya Yadav Weddings"
+  },
+  description: "Award-winning luxury wedding photographer, cinematic videographer, and professional photo/video editor. We specialize in capturing timeless wedding moments and high-end video editing.",
+  keywords: [
+    "wedding photography", 
+    "luxury wedding", 
+    "wedding films", 
+    "cinematic videography", 
+    "wedding video editing",
+    "photo editing",
+    "professional video editor",
+    "wedding photo retouching",
+    "pre-wedding shoot", 
+    "bridal photography", 
+    "Divya Yadav",
+    "divyayadavweddings"
+  ],
+  authors: [{ name: "Divya Yadav" }],
+  creator: "Divya Yadav",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://websidewedding-nine.vercel.app", // User's vercel domain or custom domain
+    title: "Luxury Wedding Films & Photography | Divya Yadav",
+    description: "Award-winning luxury wedding photographer and cinematic videographer. Capturing timeless moments.",
+    siteName: "Divya Yadav Weddings",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxury Wedding Films & Photography",
+    description: "Award-winning luxury wedding photographer and cinematic videographer.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
