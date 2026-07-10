@@ -11,30 +11,27 @@ export default function Footer() {
     return null;
   }
   return (
-    <footer className="bg-[#111111] relative border-t border-white/5 pt-20 pb-10 overflow-hidden">
-      {/* Luxury Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-[#f4efe6]/50 to-transparent opacity-50"></div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <footer className="bg-background pt-24 pb-12 border-t border-foreground/5 relative overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
           
-          {/* Brand */}
-          <div className="space-y-6">
-            <h3 className="font-heading text-3xl text-[#f4efe6] tracking-widest uppercase">
-              EDIT WITH ANSHUL
+          {/* Brand Section */}
+          <div className="md:col-span-5 flex flex-col items-center md:items-start text-center md:text-left">
+            <h3 className="font-heading text-3xl mb-6 text-foreground">
+              Anshu Flashes
             </h3>
-            <p className="font-sans text-sm text-white/60 leading-relaxed max-w-sm">
-              Professional Video Editing Studio. Where Every Frame Tells a Story.
+            <p className="font-sans text-sm text-foreground/60 max-w-sm mb-8 font-medium leading-relaxed">
+              Capturing the raw emotion, timeless beauty, and cinematic essence of your special day. Based in India, available worldwide.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:text-[#f4efe6] hover:border-[#f4efe6] transition-all duration-300 font-sans text-xs tracking-widest uppercase">
+            <div className="flex items-center gap-4">
+              <a href="https://www.instagram.com/anshuflashes?igsh=eGUweWJyYmFmZmlq&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-foreground/10 flex items-center justify-center text-foreground/70 hover:text-foreground hover:border-foreground transition-all duration-300 font-sans text-xs tracking-widest uppercase">
                 IG
               </a>
-              <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:text-[#f4efe6] hover:border-[#f4efe6] transition-all duration-300 font-sans text-xs tracking-widest uppercase">
-                YT
-              </a>
-              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:text-[#f4efe6] hover:border-[#f4efe6] transition-all duration-300 font-sans text-xs tracking-widest uppercase">
+              <a href="#" className="w-10 h-10 rounded-full border border-foreground/10 flex items-center justify-center text-foreground/70 hover:text-foreground hover:border-foreground transition-all duration-300 font-sans text-xs tracking-widest uppercase">
                 FB
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-foreground/10 flex items-center justify-center text-foreground/70 hover:text-foreground hover:border-foreground transition-all duration-300 font-sans text-xs tracking-widest uppercase">
+                YT
               </a>
             </div>
           </div>

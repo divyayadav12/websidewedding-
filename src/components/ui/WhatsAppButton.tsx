@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function WhatsAppButton() {
   const message = encodeURIComponent("Hi, I want to book my wedding shoot.");
   // Use a placeholder phone number, user can replace it later
-  const phoneNumber = "918839250427"; 
+  const phoneNumber = "919301849860"; 
   
   return (
     <Link 
